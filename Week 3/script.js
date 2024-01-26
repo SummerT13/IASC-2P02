@@ -32,7 +32,7 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 // testSphere
 const sphereGeometry = new THREE.SphereGeometry(1)
 const sphereMaterial = new THREE.MeshNormalMaterial()
-const testSphere = new THREE.mesh(sphereGeometry, sphereMaterial)
+const testSphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
 
 scene.add(testSphere)
 
