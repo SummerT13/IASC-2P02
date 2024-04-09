@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title>Data Visualization Essay</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+     <!-- three.js importmap -->
+     <script type="importmap">
+        {
+            "imports": {
+                "three": "https://ga.jspm.io/npm:three@0.158.0/build/three.module.js",
+                "OrbitControls": "https://ga.jspm.io/npm:three@0.158.0/examples/jsm/controls/OrbitControls.js",
+                "lil-gui": "https://ga.jspm.io/npm:lil-gui@0.19.1/dist/lil-gui.esm.js"
+            }
+        }
+    </script>
+
+    <!-- dataviz 1 -->
+    <script src="script.js" type="module"></script>
+
+     <!-- dataviz 1 -->
+     <script src="script2.js" type="module"></script>
+
+</head>
+<body>
+    <h1>Emma by Jane Austen</h1>
+    <h2>Summmer Tibando</h2>
+
+    <p>Essay paragraph 1</p>
+
+    <p>Essay paragraph 2</p>
+
+       <!-- dataviz 1 -->
+       <div class="canvas-container">
+        <h2>Household Objects</h2>
+        <ul>
+            <li id="red">tea</li>
+            <li id="green">book</li>
+            <li id="blue">chair</li>
+        </ul>
+        <canvas class="webgl"></canvas>
+        <p>Left click and drag to rotate. Right click and drag to move. Scroll to zoom.</p>
+        <div id ="parent1"></div>
+     </div>
+
+    <p>Essay paragraph 3</p>
+
+    <p>Essay paragraph 4</p>
+
+    <!-- dataviz 2 -->
+    <div class="canvas-container">
+        <h2>Characters Importance</h2>
+        <ul>
+            <li id="pink">Emma</li>
+            <li id="aqua">Mr. Knightley</li>
+            <li id="purple">Mr. Churchill</li>
+        </ul>
+        <canvas class="webgl2"></canvas>
+        <p>Left click and drag to rotate. Right click and drag to move. Scroll to zoom.</p>
+        <div id ="parent2"></div>
+     </div>
+
+    <p>Essay paragraph 5</p>
+    
+</body>
