@@ -83,7 +83,6 @@ const drawSphere = (i, material) =>
     scene.add(sphere)
 }
 
-
 /**********************
 ** TEXT PARSERS & UI **
 **********************/
@@ -92,9 +91,9 @@ let preset = {}
 const uiobj = {
     text: '',
     textArray: [],
-    term1: 'Emma',
-    term2: 'Mr. Knightley',
-    term3: 'Mr. Churchill',
+    term1: 'emma',
+    term2: 'knightley',
+    term3: 'churchill',
     rotateCamera: false,
     animateBubbles: false
 }
@@ -140,11 +139,12 @@ const findTermInParsedText = (term, material) =>
 }
 
 // Load source text
-fetch('https://www.gutenberg.org/cache/epub/158/pg158.txt')
+fetch('https://summert13.github.io/IASC-2P02/Assignment%202/assets/emma.txt')
     .then(response => response.text())
     .then((data) =>
     {
         uiobj.text = data
+        parseTextandTerms()
     }
 
     )
@@ -209,9 +209,10 @@ const animation = () =>
         {
             if(scene.children[i].type === "Mesh")
             {
-                scene.children[i].scale.x = Math.sin(elapsedTime * scene.children[i].randomizer)
-                scene.children[i].scele.y = Math.sin(elapsedTime * scene.children[i].randomizer)
-                scene.children[i].scele.z = Math.sin(elapsedTime * scene.children[i].randomizer)
+                if(scene.children[i].position.y < 0)
+                {
+                    scene.children[i].position.z += 0.1
+                }
             }
         }
     }

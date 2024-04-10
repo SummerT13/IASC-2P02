@@ -136,11 +136,12 @@ const findTermInParsedText = (term, material) =>
 }
 
 // Load source text
-fetch('https://www.gutenberg.org/cache/epub/158/pg158.txt')
+fetch('https://summert13.github.io/IASC-2P02/Assignment%202/assets/emma.txt')
     .then(response => response.text())
     .then((data) =>
     {
         uiobj.text = data
+        parseTextandTerms()
     }
 
     )
